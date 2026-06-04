@@ -1,0 +1,79 @@
+:root {
+  --void: #0A0A0A;
+  --navy: #0D1B2A;
+  --charcoal: #1C1C1E;
+  --surface: #141416;
+  --gold: #C9A84C;
+  --deep-gold: #8B6914;
+  --cream: #F5F0E8;
+  --grey: #B0AEA6;
+  --teal: #0B4F4A;
+  --red: #c0392b;
+  --red-light: #e74c3c;
+  --purple: #7c5cbf;
+  --border: #2a2a2e;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --font-display: 'Bebas Neue', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  min-height: 100vh;
+  background: var(--void);
+  color: var(--cream);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--deep-gold); border-radius: 2px; }
+
+input, textarea, select {
+  background: var(--surface);
+  border: 1px solid var(--deep-gold);
+  color: var(--cream);
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+textarea { resize: vertical; }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  border-radius: 2px;
+  transition: opacity 0.15s;
+}
+button:hover { opacity: 0.82; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.pill {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  border-radius: 1px;
+}
+
+.hov:hover { background: #1e1e21 !important; }
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
